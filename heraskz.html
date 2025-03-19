@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKZFANSNIGERIA</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            background-image: url('straykids1.jpg'); /* Default background */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .bias-section {
+            margin-top: 30px;
+            font-size: 24px;
+        }
+
+        .bias-button {
+            margin: 10px;
+            padding: 15px 25px;
+            border: none;
+            background-color: #ff5959;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .bias-button:hover {
+            background-color: #e04e4e;
+        }
+
+        .member-info {
+            display: none;
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        .member-info img {
+            width: 300px;
+            height: 300px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .contact {
+            margin-top: 50px;
+            font-size: 18px;
+        }
+
+        .contact a {
+            color: #ff5959;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <h1>Welcome to SKZFANSNIGERIA</h1>
+
+    <!-- Bias Selection Section -->
+    <div class="bias-section">
+        <p>Choose Your Bias</p>
+        <button class="bias-button" onclick="showMemberInfo('BangChan')">Bang Chan</button>
+        <button class="bias-button" onclick="showMemberInfo('LeeKnow')">Lee Know</button>
+        <button class="bias-button" onclick="showMemberInfo('ChangBin')">Chang Bin</button>
+        <button class="bias-button" onclick="showMemberInfo('HyunJin')">Hyun Jin</button>
+        <button class="bias-button" onclick="showMemberInfo('Han')">Han</button>
+        <button class="bias-button" onclick="showMemberInfo('Felix')">Felix</button>
+        <button class="bias-button" onclick="showMemberInfo('SeungMin')">Seung Min</button>
+        <button class="bias-button" onclick="showMemberInfo('I.N')">I.N</button>
+    </div>
+
+    <!-- Member Information Section (hidden by default) -->
+    <div id="BangChan" class="member-info">
+        <h2>Bang Chan</h2>
+        <img src="bangchan.jpg" alt="Bang Chan">
+        <p>Leader of Stray Kids, known for his exceptional production skills and strong leadership.</p>
+    </div>
+    
+    <div id="LeeKnow" class="member-info">
+        <h2>Lee Know</h2>
+        <img src="leeknow.jpg" alt="Lee Know">
+        <p>Lee Know is known for his dancing skills and his charming personality.</p>
+    </div>
+    
+    <div id="ChangBin" class="member-info">
+        <h2>Chang Bin</h2>
+        <img src="changbin.jpg" alt="Chang Bin">
+        <p>Chang Bin is the rapper of Stray Kids with powerful rap skills.</p>
+    </div>
+
+    <div id="HyunJin" class="member-info">
+        <h2>Hyun Jin</h2>
+        <img src="hyunjin.jpg" alt="Hyun Jin">
+        <p>Hyun Jin is a versatile performer, excelling in both dance and vocals.</p>
+    </div>
+
+    <div id="Han" class="member-info">
+        <h2>Han</h2>
+        <img src="han.jpg" alt="Han">
+        <p>Han is known for his emotional rap delivery and strong presence on stage.</p>
+    </div>
+
+    <div id="Felix" class="member-info">
+        <h2>Felix</h2>
+        <img src="felix.jpg" alt="Felix">
+        <p>Felix is famous for his deep voice and his adorable, yet charismatic personality.</p>
+    </div>
+
+    <div id="SeungMin" class="member-info">
+        <h2>Seung Min</h2>
+        <img src="seungmin.jpg" alt="Seung Min">
+        <p>Seung Min is Stray Kids' main vocalist, known for his beautiful and clear voice.</p>
+    </div>
+
+    <div id="I.N" class="member-info">
+        <h2>I.N</h2>
+        <img src="in.jpg" alt="I.N">
+        <p>I.N is the youngest member and is admired for his sweet personality and vocals.</p>
+    </div>
+
+    <!-- Instagram Contact Section -->
+    <div class="contact">
+        <p>Follow me on Insta: <a href="https://www.instagram.com/heritagepheb/" target="_blank">heritagepheb</a></p>
+    </div>
+
+    <script>
+        // Function to display the selected member's information
+        function showMemberInfo(member) {
+            // Hide all member info
+            const allMembers = document.querySelectorAll('.member-info');
+            allMembers.forEach(memberInfo => {
+                memberInfo.style.display = 'none';
+            });
+
+            // Show the selected member's info
+            const selectedMember = document.getElementById(member);
+            selectedMember.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
